@@ -1,3 +1,18 @@
+const fibonacciAlt = function(n) {
+
+    let fibonacciArray = [0,1];
+
+    //begin with fibonacci's first two values, compute the rest up to n
+    //via previous two values.
+
+    for (i = 2; i <= n; i++) {
+        fibonacciArray[i] = fibonacciArray[i - 1] + fibonacciArray[i - 2];
+    }
+
+    return fibonacciArray[n]
+
+}
+
 const fibonacci = function(n) {
 
     if (n < 0) return "OOPS"
