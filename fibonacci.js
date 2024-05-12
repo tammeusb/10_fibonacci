@@ -1,9 +1,11 @@
 const fibonacci = function(n) {
 
+    if (n < 0) return "OOPS"
+
     let previousValue = 0;
     let currentValue = 0;
     
-    for (i = n; i > 0; i--) {
+    for (i = +n; i > 0; i--) {
         let notYetPreviousValue = currentValue;
         currentValue = currentValue + previousValue;
         if (currentValue == 0) currentValue = 1;   
